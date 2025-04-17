@@ -4,6 +4,8 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
+const cors = require('cors');
+app.use(cors()); // Allow all origins
 
 function textToBitmap({
 	text,
