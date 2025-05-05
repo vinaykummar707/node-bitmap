@@ -7,7 +7,7 @@ const app = express();
 
 app.use(express.json());
 const cors = require('cors');
-app.use(cors()); // Allow all origins
+app.use(cors("*")); // Allow all origins
 
 function renderTextCanvas(text, fontSize, fontWeight, fontFamily) {
 	const tempCanvas = createCanvas(1, 1);
